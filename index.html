@@ -20,44 +20,46 @@
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 
 <style>
-  /* Custom CSS for navbar active state color */
-  .navbar-nav > li.active > a,
-  .navbar-nav > li.active > a:hover,
-  .navbar-nav > li.active > a:focus {
+/* Make default navbar links black */
+.navbar-nav > li > a {
+  color: black !important; /* Force the color to black */
+}
+
+/* Optional: Ensure hover/focus color is also black or different if desired */
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+   color: #555 !important; /* Example: Darker grey on hover/focus, adjust as needed */
+   /* Or keep it black: color: black !important; */
+   background-color: transparent !important; /* Ensure no background color change */
+}
+
+/* Ensure dropdown arrow is black */
+.navbar-nav > li.dropdown > a .arrow {
     color: black !important;
-    background-color: transparent !important; /* Optional: remove any background */
-  }
-  
-  .navbar-nav > li.active.dropdown > a,
-  .navbar-nav > li.active.dropdown > a:hover,
-  .navbar-nav > li.active.dropdown > a:focus {
+}
+
+/* Ensure dropdown items are black by default */
+.navbar-nav > li.dropdown > ul.dropdown-menu > li > a {
     color: black !important;
     background-color: transparent !important;
-  }
-  
-  .navbar-nav > li.active.dropdown > a .arrow {
-    color: black !important;
-  }
-  
-  /* Also apply to the dropdown items if they can be active */
-  .navbar-nav > li.dropdown > ul.dropdown-menu > li.active > a,
-  .navbar-nav > li.dropdown > ul.dropdown-menu > li.active > a:hover,
-  .navbar-nav > li.dropdown > ul.dropdown-menu > li.active > a:focus {
-    color: black !important;
-    background-color: transparent !important; /* Optional */
-  }
+}
+
+/* Optional: Style dropdown item hover/focus */
+.navbar-nav > li.dropdown > ul.dropdown-menu > li > a:hover,
+.navbar-nav > li.dropdown > ul.dropdown-menu > li > a:focus {
+    color: #555 !important; /* Example hover color */
+    background-color: #f8f9fa !important; /* Example hover background */
+}
   </style>
 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
 
 <div class="preloader">
    <div class="spinner">
       <span class="spinner-rotate"></span>
    </div>
 </div>
-
 
 <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
    <div class="container">
@@ -550,7 +552,7 @@
 <section id="projects" class="parallax-section">
   <div class="container">
     <div class="section-title-projects">
-      <h2>Projects</h2>
+      <h2 style="font-weight: normal;">Projects</h2>
     </div>
 
     <div class="project-grid-container">
@@ -592,7 +594,7 @@
       </div>
 
       <div class="project-card wow fadeInUp" data-wow-delay="0.4s"> <div class="project-image-container">
-           <img src="eda_image.png"
+           <img src="images/skills/eda_image.png"
                onerror="this.src='https://placehold.co/400x250/eee/ccc?text=Image+Not+Found';"
                alt="Project 3 Screenshot" class="project-image">
            <div class="project-overlay">
@@ -689,7 +691,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="html_css_image.png" alt="HTML5 & CSS3" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/html_css_image.png" alt="HTML5 & CSS3" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">HTML5 & CSS3</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-info" style="width: 90%; color: white; display: flex; justify-content: center; align-items: center;">90%</div>
@@ -701,7 +703,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="javascript_image.png" alt="JavaScript" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/javascript_image.png" alt="JavaScript" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">JavaScript</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-success" style="width: 90%; color: white; display: flex; justify-content: center; align-items: center;">90%</div>
@@ -713,7 +715,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.05)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="reactjs_image.png" alt="React" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/reactjs_image.png" alt="React" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">ReactJS</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-primary" style="width: 80%; color: white; display: flex; justify-content: center; align-items: center;">80%</div>
@@ -725,7 +727,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="fastapi_image.png" alt="FastAPI" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/fastapi_image.png" alt="FastAPI" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">FastAPI & Backend Integration</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-warning" style="width: 75%; color: white; display: flex; justify-content: center; align-items: center;">75%</div>
@@ -737,7 +739,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="eda_image.png" alt="EDA" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/eda_image.png" alt="EDA" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">Exploratory Data Analysis</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-danger" style="width: 80%; color: white; display: flex; justify-content: center; align-items: center;">80%</div>
@@ -749,7 +751,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="sql_image.png" alt="SQL" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/sql_image.png" alt="SQL" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">SQL</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-secondary" style="width: 90%; color: white; display: flex; justify-content: center; align-items: center;">90%</div>
@@ -761,7 +763,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="python_image.png" alt="Python" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/python_image.png" alt="Python" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">Python</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-info" style="width: 75%; color: white; display: flex; justify-content: center; align-items: center;">75%</div>
@@ -773,7 +775,7 @@
                   onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
                   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'"
               >
-                  <img src="powerbi_image.png" alt="PowerBI" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
+                  <img src="images/skills/powerbi_image.png" alt="PowerBI" style="width: 60px; height: 60px; margin-bottom: 20px; object-fit: contain;">
                   <h4 style="font-size: 20px; margin-bottom: 10px; color: white;">Microsoft PowerBI</h4>
                   <div class="progress" style="height: 20px; border-radius: 10px; overflow: hidden;">
                       <div class="progress-bar bg-info" style="width: 80%; color: white; display: flex; justify-content: center; align-items: center;">80%</div>
@@ -784,97 +786,97 @@
   </div>
 </section>
 
-
 <section id="experience" class="parallax-section" style="background-color: #41729f;">
   <div class="container">
-    <div class="row align-items-center">
+   <div class="row">
 
-      <!-- Left Column: Image -->
-      <div class="col-md-6 col-sm-12 mb-4 mb-md-0">
-        <div class="experience-img" style="
-          background-image: url('images/experience-img.jpg');
-          background-size: cover;
-          background-position: center;
-          width: 100%;
-          min-height: 500px;
-          border-radius: 15px;
-        " role="img" aria-label="Professional headshot"></div>
-      </div>
+     <!-- Academic Details Replaced with Image -->
+     <div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.6s">
+       <div class="color-white education-thumb" style="padding: 20px;">
+         <h1 style="color: white;">Experiences</h1>
+         
+         <!-- Replaced with a Local Image -->
+         <img src="images/experience/experience-image.jpg" alt="Experience Image" style="width: 100%; height: auto; border-radius: 10px;">
+       </div>
+     </div>
 
-<!-- Right Column: Experience Carousel -->
-<div class="col-md-6 col-sm-12">
-  <div class="experience-thumb">
-    <div class="wow fadeInUp section-title" data-wow-delay="0.8s">
-      <h1 style="color: white;">Experiences</h1>
-    </div>
+<!-- First Job Detail: Horizontal Slider -->
+<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.2s" style="padding: 20px 10px 20px 0;">
+  <div class="color-white job-detail" style="padding: 20px; background-color: #274472; border-radius: 10px;">
+    <h3 style="color: white;">Young Professional (Data Science)</h3>
+    <h4 style="color: white;">2024</h4>
+    <p style="color: white; margin: 0; margin-right: 10px;">Business Automation Ltd.</p>
+    <img src="images/experience/ba.png" alt="BA Logo" style="height: 28px; width: auto;">
 
-    <div id="experienceCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-      <div class="carousel-inner text-white">
-
-        <!-- Job 1 -->
-        <div class="carousel-item active">
-          <div class="media">
-            <div class="media-object media-left">
-              <i class="fas fa-briefcase fa-2x text-light pr-3"></i>
-            </div>
-            <div class="media-body">
-              <h3 class="media-heading" style="color: white;">Young Professional (Data Science)
-                <small style="color: white;">2024</small>
-              </h3>
-              <p style="color: white;"><strong>Business Automation Ltd.</strong></p>
-
-              <h4 style="color: white;">Project: BIDA Database</h4>
-              <p style="color: white;"><em>Client: Bangladesh Investment Development Authority</em></p>
-              <p style="color: white;">Maintained and analyzed BIDA’s internal database, generating insights to support investment decision-making and automation processes.</p>
-
-              <h4 style="color: white;">Project: Hajj Data Analysis</h4>
-              <p style="color: white;"><em>Client: Ministry of Religious Affairs</em></p>
-              <p style="color: white;">Gathered and analyzed Hajj participant data over the years and built interactive visualization dashboards.</p>
-
-              <h4 style="color: white;">Project: Land E-Mutation Portal</h4>
-              <p style="color: white;"><em>Client: Ministry of Land</em></p>
-              <p style="color: white;">Handled data integration and ETL processes; developed charts for use in government web portals.</p>
-            </div>
+    <!-- Slider Container -->
+    <div class="slider-wrapper" style="position: relative; overflow: hidden;">
+      <div class="slider-track" id="sliderTrack" style="display: flex; transition: transform 0.4s ease;">
+        
+        <!-- Slide 1 -->
+        <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+          <div style="background-color: #40618c; padding: 15px; border-radius: 8px;">
+            <h5 style="color: white; font-size: 20px; margin-bottom: 5px;">BIDA Database</h5>
+            <p style="color: #d1e2ff; margin: 0;">Client: Bangladesh Investment Development Authority</p>
+            <p style="color: white; margin-top: 5px;">Maintained and analyzed BIDA’s internal database to support investment decisions.</p>
           </div>
         </div>
 
-        <!-- Job 2 -->
-        <div class="carousel-item">
-          <div class="media">
-            <div class="media-object media-left">
-              <i class="fas fa-laptop-code fa-2x text-light pr-3"></i>
-            </div>
-            <div class="media-body">
-              <h3 class="media-heading" style="color: white;">Freelance Web Developer
-                <small style="color: white;">2023 - Present</small>
-              </h3>
-              <p style="color: white;"><strong>Independent Projects</strong></p>
-              <h4 style="color: white;">Project: Custom Web Solutions</h4>
-              <p style="color: white;">Built responsive websites and interactive dashboards using React, and various backend integrations for small businesses and startups.</p>
-            </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+          <div style="background-color: #40618c; padding: 15px; border-radius: 8px;">
+            <h5 style="color: white; font-size: 20px; margin-bottom: 5px;">Hajj Data Analysis</h5>
+            <p style="color: #d1e2ff; margin: 0;">Client: Ministry of Religious Affairs</p>
+            <p style="color: white; margin-top: 5px;">Analyzed historical Hajj participant data and created interactive dashboards.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+          <div style="background-color: #40618c; padding: 15px; border-radius: 8px;">
+            <h5 style="color: white; font-size: 20px; margin-bottom: 5px;">Land E-Mutation Portal</h5>
+            <p style="color: #d1e2ff; margin: 0;">Client: Ministry of Land</p>
+            <p style="color: white; margin-top: 5px;">Worked on data integration, ETL processes, and dashboard charting for public portals.</p>
           </div>
         </div>
 
       </div>
 
-      <!-- Carousel Controls -->
-      <a class="carousel-control-prev" href="#experienceCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#experienceCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <!-- Navigation Buttons -->
+      <button onclick="slidePrev()" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: none; border: none; color: white; font-size: 24px; cursor: pointer;">❮</button>
+      <button onclick="slideNext()" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); background: none; border: none; color: white; font-size: 24px; cursor: pointer;">❯</button>
     </div>
-
   </div>
 </div>
 
+<script>
+  let currentSlide = 0;
+  const sliderTrack = document.getElementById('sliderTrack');
+  const totalSlides = sliderTrack.children.length;
 
+  function slideNext() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function slidePrev() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+</script>
+
+  <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="1.2s" style="padding: 20px 30px 20px 0;">
+    <div class="color-white job-detail h-100" style="padding: 20px; background-color: #274472; border-radius: 10px;">
+      <h3 style="color: white;">Freelance Web Developer</h3>
+      <h4 style="color: white;">2023–Present</h4>
+      <p style="color: white;">Independent Projects</p>
+      <p style="color: white;">Designed and developed custom, responsive websites and interactive dashboards using React and Tailwind CSS. Served clients primarily from the USA and Canada across multiple industries, delivering tailored digital solutions. Regularly work as a verified seller on Upwork and Fiverr, maintaining a strong client base through consistent quality, timely delivery, and long-term project support.</p>
     </div>
   </div>
+
+   </div>
+  </div>
 </section>
+
 
 
 
@@ -916,7 +918,7 @@
           onmouseout="this.querySelector('.hover-logo').style.opacity='0';"
           style="
             position: relative;
-            background-image: url('images/bsc.jpg');
+            background-image: url('images/academics/bsc.jpg');
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -938,7 +940,7 @@
             transition: opacity 0.3s ease;
           ">
           <a href="https://www.sust.edu" target="_blank" style="display: inline-block;">
-            <img src="images/sust-logo.png" alt="SUST Logo" style="height: 90px; width: auto;">
+            <img src="images/academics/sust-logo.png" alt="SUST Logo" style="height: 90px; width: auto;">
           </a>
           </div>
           
@@ -951,7 +953,7 @@
           onmouseout="this.querySelector('.hover-logo').style.opacity='0';"
           style="
             position: relative;
-            background-image: url('images/msc.jpg');
+            background-image: url('images/academics/msc.jpg');
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -973,7 +975,7 @@
             transition: opacity 0.3s ease;
           ">
           <a href="https://www.juniv.edu" target="_blank" style="display: inline-block;">
-            <img src="images/juniv-logo.png" alt="JU Logo" style="height: 90px; width: auto;">
+            <img src="images/academics/juniv-logo.png" alt="JU Logo" style="height: 90px; width: auto;">
           </a>
           </div>
           
@@ -992,19 +994,19 @@
 
         <div class="quote-slider">
           <div class="quote-slide active" style="display: block;">
-            <img src="images/r1.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
+            <img src="images/recom/r1.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
             <h2 style="margin-top: 20px;">“Ifty has made a profound impact in data science through his exceptional work. He created several advanced visualization dashboards for me, which have rightfully garnered high praise.”</h2>
             <p style="color: white;"><bold>Adita Afrin | Researcher</bold></p>
           </div>
 
           <div class="quote-slide" style="display: none;">
-            <img src="images/r2.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
+            <img src="images/recom/r2.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
             <h2 style="margin-top: 20px;">“His growth in data analysis and web development has been remarkable, showing significant advancement over time.”</h2>
             <p style="color: white;"><bold>Deen Mohammad | Data Scientist</bold></p>
           </div>
 
           <div class="quote-slide" style="display: none;">
-            <img src="images/r3.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
+            <img src="images/recom/r3.png" alt="Recommender Photo" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; margin-bottom: 20px;">
             <h2 style="margin-top: 20px;">“Having collaborated with him, I can attest to his punctuality and meticulous attention to detail.”</h2>
             <p style="color: white;"><bold>Md. Robiul Islam | Data Engineer, Business Automation Ltd.</bold></p>
           </div>
@@ -1128,7 +1130,7 @@
 
       <div class="col-md-3 col-sm-6" style="padding: 0;">
           <div style="
-          background-image: url('images/contact-img.jpg');
+          background-image: url('images/contact/contact-img.jpg');
           background-size: cover;
           background-position: center;
           width: 100%;
